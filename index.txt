@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <title>The Ultimate Game Show - Dustin Hendrickson</title>
+	<script type="text/javascript" src="phaser/phaser.min.js"></script>
+    <script src="gamestates/boot.js"></script>
+    <script src="gamestates/preload.js"></script>
+    <script src="gamestates/menu.js"></script>
+	<script src="gamestates/controls.js"></script>
+    <script src="gamestates/settings.js"></script>
+    <script src="gamestates/gameloop.js"></script>
+    <script src="gamestates/gameover.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+    <div id="TheUltimateGameShow" >
+        <script>
+            var game = new Phaser.Game(1024, 768, Phaser.CANVAS, 'TheUltimateGameShow');
+            game.state.add("Boot", boot);
+            game.state.add("Preload", preload);
+            game.state.add("Menu", menu);
+			game.state.add("Controls", controls);
+			game.state.add("Settings", settings);
+            game.state.add("GameLoop", gameloop);
+            game.state.add("GameOver", gameover);
+			
+            game.state.start("Boot");
+        </script>
+    </div>
+</head>
+<body>
+</body>
+</html>
